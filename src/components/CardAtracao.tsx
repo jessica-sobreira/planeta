@@ -31,7 +31,7 @@ export const CardAtracao = (props: CardProps) => {
             </CardContent>
 
             <CardActions>
-                <Button>
+                <Button color="error">
                     <Favorite /> <span>Curti! ({props.atracao.curtidas})</span>
                 </Button>
                 <Button>
