@@ -62,6 +62,26 @@ const state: Atracao[] = [
         descurtidas: 0,
         urlFoto: "https://s3.wasabisys.com/images.planetaatlantida.com.br/2024/lineup/home/polaroid-osparalamas.png"
     },
+
+    {
+        id: "7",
+        nome: "Vitor Kley",
+        descricao: "Vitor Kley é energia pura e não poderia ficar de fora desse lineup!",
+        horario: "23:30",
+        curtidas: 0,
+        descurtidas: 0,
+        urlFoto: "https://s3.wasabisys.com/images.planetaatlantida.com.br/2024/lineup/home/polaroid-vitor-kley.png"
+    },
+
+    {
+        id: "8",
+        nome: "Gabriel O Pensador",
+        descricao: "Como não ter esse nome de peso no nosso lineup?",
+        horario: "00:30",
+        curtidas: 0,
+        descurtidas: 0,
+        urlFoto: "https://s3.wasabisys.com/images.planetaatlantida.com.br/2024/lineup/home/polaroid-gabrielopensador.png"
+    },
 ];  
 
 
