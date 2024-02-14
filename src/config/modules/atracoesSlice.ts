@@ -5,58 +5,57 @@ const state: Atracao[] = [
     {
         id: "1",
         nome: "Fresno",
-        descricao: "Nossa casa fica até menos assombrada quando a gente curte show de artistas que gostamos tanto, né?",
+        descricao: "Teste",
         horario: "18:00",
         curtidas: 0,
         descurtidas: 0,
-        urlFoto: "https://s3.wasabisys.com/images.planetaatlantida.com.br/2024/lineup/home/polaroid-fresno.png"
+        urlFoto: "https://s3.wasabisys.com/images.planetaatlantida.com.br/2024/lineup/home/polaroid-fresno.png",
     },
 
-    
     {
         id: "2",
         nome: "NX Zero",
-        descricao: "Entre razões e emoções a saída é se jogar ao som de NX Zero.",
+        descricao: "Teste",
         horario: "19:00",
         curtidas: 0,
         descurtidas: 0,
-        urlFoto: "https://s3.wasabisys.com/images.planetaatlantida.com.br/2024/lineup/home/polaroid-nxzero.png"
+        urlFoto: "https://s3.wasabisys.com/images.planetaatlantida.com.br/2024/lineup/home/polaroid-nxzero.png",
     },
 
     {
         id: "3",
         nome: "Reação em Cadeia",
-        descricao: "Reação em Cadeia é uma das bandas mais relevantes do rock gaúcho a nível nacional.",
+        descricao: "Teste",
         horario: "20:00",
         curtidas: 0,
         descurtidas: 0,
-        urlFoto: "https://s3.wasabisys.com/images.planetaatlantida.com.br/2024/lineup/home/polaroid-reacao-em-cadeia.png"
+        urlFoto: "https://s3.wasabisys.com/images.planetaatlantida.com.br/2024/lineup/home/polaroid-reacao-em-cadeia.png",
     },
 
     {
         id: "4",
         nome: "Papas da Língua",
-        descricao: "Eu sei.. Tudo pode acontecer… Inclusive, ter uma das maiores bandas de pop rock do Brasil no lineup",
+        descricao: "Teste",
         horario: "21:00",
         curtidas: 0,
         descurtidas: 0,
-        urlFoto: "https://s3.wasabisys.com/images.planetaatlantida.com.br/2024/lineup/home/polaroid-papasnalingua.png"
+        urlFoto: "https://s3.wasabisys.com/images.planetaatlantida.com.br/2024/lineup/home/polaroid-papasnalingua.png",
     },
 
     {
         id: "5",
         nome: "Armandinho",
-        descricao: "Nessa e em todas as outras vidas queremos Armandinho no nosso lineup!",
+        descricao: "Teste",
         horario: "22:00",
         curtidas: 0,
         descurtidas: 0,
-        urlFoto: "https://s3.wasabisys.com/images.planetaatlantida.com.br/2024/lineup/home/polaroid-armandinho.png"
+        urlFoto: "https://s3.wasabisys.com/images.planetaatlantida.com.br/2024/lineup/home/polaroid-armandinho.png",
     },
 
     {
         id: "6",
         nome: "Os Paralamas do Sucesso",
-        descricao: "Uma das maiores bandas brasileiras estará apresentando sua turnê de 40 anos no nosso palco",
+        descricao: "Teste",
         horario: "23:00",
         curtidas: 0,
         descurtidas: 0,
@@ -66,22 +65,23 @@ const state: Atracao[] = [
     {
         id: "7",
         nome: "Vitor Kley",
-        descricao: "Vitor Kley é energia pura e não poderia ficar de fora desse lineup!",
+        descricao: "Teste",
         horario: "23:30",
         curtidas: 0,
         descurtidas: 0,
-        urlFoto: "https://s3.wasabisys.com/images.planetaatlantida.com.br/2024/lineup/home/polaroid-vitor-kley.png"
+        urlFoto: "https://s3.wasabisys.com/images.planetaatlantida.com.br/2024/lineup/home/polaroid-vitor-kley.png",
     },
 
     {
         id: "8",
         nome: "Gabriel O Pensador",
-        descricao: "Como não ter esse nome de peso no nosso lineup?",
+        descricao: "Teste",
         horario: "00:30",
         curtidas: 0,
         descurtidas: 0,
-        urlFoto: "https://s3.wasabisys.com/images.planetaatlantida.com.br/2024/lineup/home/polaroid-gabrielopensador.png"
+        urlFoto: "https://s3.wasabisys.com/images.planetaatlantida.com.br/2024/lineup/home/polaroid-gabrielopensador.png",
     },
+
 ];  
 
 

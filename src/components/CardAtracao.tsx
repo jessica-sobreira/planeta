@@ -1,21 +1,26 @@
 import { Favorite, ThumbDown } from "@mui/icons-material";
-import { Box, Button, Card, CardActions, CardContent, CardMedia, Divider, Typography } from "@mui/material";
+import { Box, Button, Card, CardActions, CardContent, CardMedia, Divider, Typography, styled } from "@mui/material";
 import { Atracao } from "../models/atracao.model";
 
 interface CardProps {
     atracao: Atracao;
 }
 
+const CardStyled = styled(Card)`
+    margin: 0px;
+`
+
 export const CardAtracao = (props: CardProps) => {
     return (
-        <Card>
+        <CardStyled>
             <CardMedia
                 component="img"
-                height="194"
+                width="100%"
+                height="200%"
                 image={props.atracao.urlFoto}
             />
             <CardContent>
-                <Typography variant="h5">{props.atracao.nome}</Typography>
+                <Typography variant="h5" color="primary">{props.atracao.nome}</Typography>
                 <Typography variant="body1">
                     {props.atracao.descricao}
                 </Typography>
@@ -38,6 +43,6 @@ export const CardAtracao = (props: CardProps) => {
                     <ThumbDown /> Muito ruim! ({props.atracao.descurtidas})
                 </Button>
             </CardActions>
-        </Card>
+        </CardStyled>
     );
 };
