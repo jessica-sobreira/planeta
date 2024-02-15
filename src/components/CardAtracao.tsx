@@ -1,18 +1,28 @@
 import { Favorite, ThumbDown } from "@mui/icons-material";
 import { Box, Button, Card, CardActions, CardContent, CardMedia, Divider, Typography, styled } from "@mui/material";
 import { Atracao } from "../models/atracao.model";
+import { useAppDispatch } from "../config/hooks";
 
 interface CardProps {
     atracao: Atracao;
 }
 
-const CardStyled = styled(Card)`
-    margin: 0px;
+const CardActionStyled = styled(CardActions)`
+    span {
+        font-size: 10px;
+        margin-left: 4px;
+    }
 `
 
 export const CardAtracao = (props: CardProps) => {
+    const dispatch = useAppDispatch();
+    const curtir = () => {
+        dispatch(curtir(props.atracao.id));
+    }
+
+
     return (
-        <CardStyled>
+        <Card>
             <CardMedia
                 component="img"
                 width="100%"
@@ -35,14 +45,14 @@ export const CardAtracao = (props: CardProps) => {
                 </Box>
             </CardContent>
 
-            <CardActions>
-                <Button color="error">
+            <CardActionStyled>
+                <Button color="error" onClick={curtir}>
                     <Favorite /> <span>Curti! ({props.atracao.curtidas})</span>
                 </Button>
                 <Button>
-                    <ThumbDown /> Muito ruim! ({props.atracao.descurtidas})
+                    <ThumbDown /> <span>Muito ruim! ({props.atracao.descurtidas})</span> 
                 </Button>
-            </CardActions>
-        </CardStyled>
+            </CardActionStyled>
+        </Card>
     );
 };
