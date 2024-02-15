@@ -1,4 +1,6 @@
-import { AppBar, Avatar, Toolbar, styled } from "@mui/material";
+import { AppBar, Avatar, Switch, Toolbar, styled } from "@mui/material";
+import { useAppDispatch } from "../config/hooks";
+import { mudarTheme } from "../config/modules/theme.slice";
 
 const ToolbarStyled = styled(Toolbar)`
     display: flex;
@@ -11,6 +13,13 @@ const ToolbarStyled = styled(Toolbar)`
 `;
 
 export const Header = () => {
+    const dispatch = useAppDispatch()
+
+    const mudarTema = () => {
+        dispatch(mudarTheme())
+    }
+
+
     return (
         <AppBar position="static">
             <ToolbarStyled>
@@ -21,7 +30,7 @@ export const Header = () => {
                 </div>
 
                 <div>
-                    <input type="text" />
+                <Switch onChange={mudarTema} /> Default
                 </div>
             </ToolbarStyled>
         </AppBar>

@@ -9,10 +9,13 @@ import { darkTheme } from "./config/themes/darkmode.theme";
 
 export function Root() {
     const atracoes = useAppSelector(state => state.atracoes);
+    const isDefaultTheme = useAppSelector(state => state.theme);
+
+    const theme = isDefaultTheme ? defaultTheme : darkTheme
 
     return (
     <>
-        <ThemeProvider theme={darkTheme}>
+        <ThemeProvider theme={theme}>
             <CssBaseline />
             <Header />
                 <Container>

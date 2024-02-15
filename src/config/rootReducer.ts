@@ -2,9 +2,11 @@ import { combineReducers } from "@reduxjs/toolkit";
 import { persistReducer } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 import atracoesSlice from "./modules/atracoesSlice";
+import themeSlice from "./modules/theme.slice";
 
 const rootRecucer = combineReducers({
-    atracoes: atracoesSlice
+    atracoes: atracoesSlice,
+    theme: themeSlice
 });
 
 export const persistedReducer = persistReducer(
