@@ -2,7 +2,7 @@ import { Favorite, ThumbDown } from "@mui/icons-material";
 import { Box, Button, Card, CardActions, CardContent, CardMedia, Divider, Typography, styled } from "@mui/material";
 import { Atracao } from "../models/atracao.model";
 import { useAppDispatch } from "../config/hooks";
-import { curtirAtracao } from "../config/modules/atracoesSlice";
+import { curtirAtracao, descurtirAtracao } from "../config/modules/atracoesSlice";
 
 interface CardProps {
     atracao: Atracao;
@@ -18,9 +18,11 @@ const CardActionStyled = styled(CardActions)`
 export const CardAtracao = (props: CardProps) => {
     const dispatch = useAppDispatch();
     const curtir = () => {
-
         dispatch(curtirAtracao(props.atracao.id));
+    }
 
+    const descurtir = () => {
+        dispatch(descurtirAtracao(props.atracao.id));
     }
 
 
@@ -52,7 +54,7 @@ export const CardAtracao = (props: CardProps) => {
                 <Button color="error" onClick={curtir}>
                     <Favorite /> <span>Curti! ({props.atracao.curtidas})</span>
                 </Button>
-                <Button>
+                <Button onClick={descurtir}>
                     <ThumbDown /> <span>Muito ruim! ({props.atracao.descurtidas})</span> 
                 </Button>
             </CardActionStyled>

@@ -21,7 +21,7 @@ export function Root() {
                     <Grid container spacing={4}>
                         {
                             atracoes.map((item) => (
-                                <Grid item xs={12} sm={4} md={3} lg={3} xl={1}>
+                                <Grid item xs={12} sm={4} md={3} lg={3} xl={1} key={item.id}>
                                     <CardAtracao atracao={item} />
                                 </Grid>
                             ))

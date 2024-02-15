@@ -99,7 +99,20 @@ const atracoesSlice = createSlice({
                 }
                 return item;
             })
+        },
+
+        descurtirAtracao: (state, action: PayloadAction<string>) => {
+            return state.map((item) => {
+                if(item.id === action.payload) {
+                    const novoItem = {...item};
+                    novoItem.descurtidas++
+                    return novoItem
+                }
+                return item;
+            })
         }
+
+
     }
 });
 
@@ -109,3 +122,5 @@ const atracoesSlice = createSlice({
 export default atracoesSlice.reducer;
 
 export const { curtirAtracao } = atracoesSlice.actions;
+
+export const { descurtirAtracao } = atracoesSlice.actions;
