@@ -6,7 +6,7 @@ import themeSlice from "./modules/theme.slice";
 
 const rootRecucer = combineReducers({
     atracoes: atracoesSlice,
-    theme: themeSlice
+    theme: themeSlice,
 });
 
 export const persistedReducer = persistReducer(
