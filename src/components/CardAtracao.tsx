@@ -13,28 +13,37 @@ const CardActionStyled = styled(CardActions)`
         font-size: 10px;
         margin-left: 4px;
     }
-`
+`;
+
+const StyledCard = styled(Card)`
+    height: 100%; 
+    margin-bottom: 2em;
+    display: flex;
+    flex-direction: column; 
+`;
+
+const StyledCardContent = styled(CardContent)`
+    flex: 1; 
+`;
 
 export const CardAtracao = (props: CardProps) => {
     const dispatch = useAppDispatch();
     const curtir = () => {
         dispatch(curtirAtracao(props.atracao.id));
-    }
+    };
 
     const descurtir = () => {
         dispatch(descurtirAtracao(props.atracao.id));
-    }
-
+    };
 
     return (
-        <Card>
+        <StyledCard>
             <CardMedia
                 component="img"
                 width="100%"
-                height="200%"
-                image={props.atracao.urlFoto}
+                image={props.atracao.urlFoto} 
             />
-            <CardContent>
+            <StyledCardContent>
                 <Typography variant="h5" color="primary">{props.atracao.nome}</Typography>
                 <Typography variant="body1">
                     {props.atracao.descricao}
@@ -45,10 +54,10 @@ export const CardAtracao = (props: CardProps) => {
                         Horário:
                     </Typography>
                     <Typography component={"span"} variant="body2">
-                    {props.atracao.horario}
+                        {props.atracao.horario}
                     </Typography>
                 </Box>
-            </CardContent>
+            </StyledCardContent>
 
             <CardActionStyled>
                 <Button color="error" onClick={curtir}>
@@ -58,6 +67,6 @@ export const CardAtracao = (props: CardProps) => {
                     <ThumbDown /> <span>Muito ruim! ({props.atracao.descurtidas})</span> 
                 </Button>
             </CardActionStyled>
-        </Card>
+        </StyledCard>
     );
 };
