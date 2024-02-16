@@ -5,6 +5,7 @@ import { useAppSelector } from "./config/hooks";
 import { defaultTheme } from "./config/themes/default.theme";
 import { ThemeProvider } from "@mui/material/styles";
 import { darkTheme } from "./config/themes/darkmode.theme";
+import { Footer } from "./components/Footer";
 
 
 export function Root() {
@@ -32,6 +33,8 @@ export function Root() {
                         
                     </Grid>
             </Container>
+            <br />
+            <Footer />
         </ThemeProvider>
     </>
     )
