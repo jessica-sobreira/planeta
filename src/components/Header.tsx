@@ -30,7 +30,7 @@ export const Header = () => {
                 </div>
 
                 <div>
-                <Switch onChange={mudarTema} /> Default
+                <Switch onChange={mudarTema} /> Dark Mode
                 </div>
             </ToolbarStyled>
         </AppBar>
